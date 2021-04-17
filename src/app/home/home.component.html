@@ -4,11 +4,24 @@
         <div class="col-lg-6 col-md-6 form-group">
 <h2>Upload the data as csv here</h2>
 
-<form action = "http://localhost:5000/uploader" method = "POST" 
-enctype = "multipart/form-data">
-    <input type = "file" name = "file" />
-    <input type = "submit"  class="btn btn-primary"/>
-</form>
+<div class="text-center">
+    <input class="form-control" type="file" 
+            (change)="onChange($event)">
+    <button (click)="onUpload()" 
+        class="btn btn-success">
+        Upload
+    </button>
+</div>
+<!-- Shareable short link of  uoloaded file -->
+<div class="container text-center jumbotron"
+    *ngIf="shortLink">
+    <h2> Visit Here</h2>
+    <a href="{{shortLink}}">{{shortLink}}</a>
+</div>
+<!--Flag variable is used here-->
+<div class="container" *ngIf="loading">
+    <h3>Loading ...</h3>
+</div>
 <h2>Accuracy on each model</h2>
 <div class="table-responsive">
 <table class=table>
