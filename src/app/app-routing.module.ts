@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import {ForecastComponent} from './forecast/forecast.component';
+import {AnalomyComponent} from './analomy/analomy.component';
+import {TrendComponent} from './trend/trend.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '',component: HomeComponent}, 
+  { path: 'forecast',component: ForecastComponent}, 
+  { path: 'analomy',component: AnalomyComponent}, 
+  { path: 'trend',component: TrendComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
