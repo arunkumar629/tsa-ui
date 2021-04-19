@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ForecastComponent } from './forecast/forecast.component';
 import { AnalomyComponent } from './analomy/analomy.component';
 import { TrendComponent } from './trend/trend.component';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TrendComponent } from './trend/trend.component';
     HomeComponent,
     ForecastComponent,
     AnalomyComponent,
-    TrendComponent
+    TrendComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit} from '@angular/core';
 import { FileUploadService } from '../file-upload.service';
 
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
     shortLink: string = "";
     loading: boolean = false; // Flag variable
     file: any= null; // Variable to store file
-constructor(private fileUploadService: FileUploadService) { }
+constructor(private router: Router, private fileUploadService: FileUploadService) { }
 
   ngOnInit(): void {
   }
@@ -21,7 +22,7 @@ constructor(private fileUploadService: FileUploadService) { }
     // OnClick of button Upload
     onUpload() {
         this.loading = !this.loading;
-        console.log(this.file);
+        localStorage.setItem('file',this.file.name);
         this.fileUploadService.upload(this.file).subscribe(
             (event: any) => {
                 if (typeof (event) === 'object') {
@@ -32,4 +33,8 @@ constructor(private fileUploadService: FileUploadService) { }
             }
         );
     }
+generateChart(){
+this.router.navigate(['/chart']);
+}
+
 }
