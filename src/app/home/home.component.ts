@@ -11,7 +11,8 @@ export class HomeComponent implements OnInit {
 
     shortLink: string = "";
     loading: boolean = false; // Flag variable
-    file: any= null; // Variable to store file
+    file: any=null;
+filename:any;
 constructor(private router: Router, private fileUploadService: FileUploadService) { }
 
   ngOnInit(): void {
@@ -22,7 +23,10 @@ constructor(private router: Router, private fileUploadService: FileUploadService
     // OnClick of button Upload
     onUpload() {
         this.loading = !this.loading;
-        localStorage.setItem('file',this.file.name);
+        if(this.file.name!=null){
+        this.filename=this.file.name;
+        }
+        localStorage.setItem('file',this.filename);
         this.fileUploadService.upload(this.file).subscribe(
             (event: any) => {
                 if (typeof (event) === 'object') {
