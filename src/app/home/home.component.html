@@ -2,6 +2,7 @@
         <div class="col-lg-3 col-md-3 form-group">
 </div>
         <div class="col-lg-6 col-md-6 form-group">
+<br/><br/>
 <h2>Upload the data as csv here</h2>
 
 <div class="text-center">
@@ -22,29 +23,11 @@
 <div class="container" *ngIf="loading">
     <h3>Loading ...</h3>
 </div>
-<button type="submit" (click)="generateChart()" class="btn btn-primary">View CGraphs Here</button>
-<h2>Accuracy on each model</h2>
-<div class="table-responsive">
-<table class=table>
-    <tr>
-        <th>S. No</th>
-        <th>Model name</th>
-        <th>Accuracy</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>ARIMA</td>
-        <td>-</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>RNN</td>
-        <td>-</td>
-    </tr>
-    <td>3</td>
-    <td>PROPHET</td>
-    <td>-</td>
-</table>
-</div>
+
+<br/><br/>
+<button type="submit" (click)="generateChart()" class="btn btn-primary">View Graphs Here</button>
+
+<button type="submit" (click)="generateStatistics()" class="btn btn-primary">View statistics Here</button>
+
 </div>
 </div>

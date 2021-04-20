@@ -41,4 +41,8 @@ generateChart(){
 this.router.navigate(['/chart']);
 }
 
+generateStatistics(){
+this.router.navigate(['/statistics']);
+}
+
 }
