@@ -1,0 +1,44 @@
+<br/><br/>
+{{this.forecastDetails.accuracy}}
+<div class="row">
+<div class="col-lg-3 col-md-3 form-group">
+</div>
+<div class="col-lg-6 col-md-6 form-group">
+<h2>Your can predict here</h2>
+<form>
+    <label for="start_time">Enter your start time</label>
+
+    <input type=date id="start_time">
+    <input type=time id="start_time">
+
+    <label for="End_time">Enter your end time</label>
+
+    <input type=date id="End_time">
+    <input type=time id="End_time">
+
+<select>
+    <option>ARIMA</option>
+    <option>RNN</option>
+    <option>PROPHET</option>
+</select>
+
+<input type="submit" value="predict" class="btn btn-primary">
+</form>
+<br/><br/>
+<h2>Your predicted results are as below</h2>
+<div class="table-responsive">
+<table class="table">
+    <tr>
+        <th>S. No</th>
+        <th>Time range</th>
+        <th>Predicted values</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+</table>
+</div>
+</div>
+</div>
