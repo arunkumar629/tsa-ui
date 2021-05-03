@@ -8,8 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProphetComponent implements OnInit {
 filename:any;
+filename_compare:any;
 baseUrl:string='http://localhost:5000/static/';
 img:string="_prophetPredict.jpg";
+img_compare:string="_prophetCompare.jpg";
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ let name=this.filename;
 this.filename=this.filename.slice(0,-4)
 this.baseUrl=this.baseUrl.concat(this.filename.toString());
 this.filename=this.baseUrl.concat(this.img.toString());
-
+this.filename_compare=this.baseUrl.concat(this.img_compare.toString());
     this.http.get('//localhost:5000/prophet/'+name).subscribe((data: any)=>{
 
     });
