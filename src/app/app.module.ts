@@ -11,6 +11,7 @@ import { AnalomyComponent } from './analomy/analomy.component';
 import { TrendComponent } from './trend/trend.component';
 import { ChartComponent } from './chart/chart.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { ProphetComponent } from './prophet/prophet.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { StatisticsComponent } from './statistics/statistics.component';
     AnalomyComponent,
     TrendComponent,
     ChartComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    ProphetComponent
   ],
   imports: [
     BrowserModule,

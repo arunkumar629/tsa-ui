@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {ProphetComponent} from './prophet/prophet.component';
 import {HomeComponent} from './home/home.component';
 import {ForecastComponent} from './forecast/forecast.component';
 import {AnalomyComponent} from './analomy/analomy.component';
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'chart',component: ChartComponent}, 
   { path: 'analomy',component: AnalomyComponent}, 
   { path: 'statistics',component: StatisticsComponent}, 
-  { path: 'trend',component: TrendComponent}
+  { path: 'trend',component: TrendComponent},
+  { path: 'prophet',component: ProphetComponent}
 ];
 
 @NgModule({
