@@ -46,5 +46,11 @@ this.filename_histogram=this.baseUrl.concat(this.img_histogram.toString());
 //alert(data);  
     });
   }
-
+loadmore(){
+let name=localStorage.getItem('file');
+    this.http.get('//localhost:5000/anomalyLoad/'+name).subscribe((data: any)=>{
+      
+//alert(data);  
+    });
+}
 }
