@@ -1,4 +1,5 @@
     <div class="row">
+
         <div class="col-lg-6 col-md-6 form-group">
 			<h2>Comparison of predicted and true values</h2>
 <img src="{{filename_compare}}" alt="prophet_compare" height="70%" width="70%">
@@ -7,3 +8,7 @@
 			<h2>Prophet prediction</h2>
 <img src="{{filename}}" alt="prophet_prediction" height="70%" width="70%">
 </div>
+</div>
+<div>accuracy{{this.data.accuracy}}</div>
+	
+<div>Stationary {{this.data.stationary}}</div>
